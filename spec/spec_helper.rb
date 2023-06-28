@@ -2,8 +2,6 @@
 
 require "buildkite/test_collector"
 
-Buildkite::TestCollector.configure(hook: :rspec)
-
 Dir["spec/support/**/*.rb"].each { |f| require File.expand_path(f) }
 
 RSpec.configure do |config|
